@@ -4,7 +4,30 @@
 //Fetch Flight Price API (Adam and Hayden)
 function flightPrice() {
     fetch(
-        'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/',
+        'https://api.punkapi.com/v2/beers'
+    )
+
+    .then(function(randomBeer){
+        return randomBeer.json();
+    })
+    .then(function(randomBeer){
+        console.log(randomBeer);
+
+        var beer = randomBeer.id[0]
+
+        var beerResponse = document.querySelector('#beerName')
+        beerResponse.innerHTML = beer;
+    }
+    )
+    
+    
+}
+flightPrice();
+//Fetch Covid Cases API (Adam and Hayden)
+function flight() {
+    fetch(
+        'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+        
     )
 
     .then(function(skyScannerPrices){
@@ -15,39 +38,12 @@ function flightPrice() {
     }
     )
     
-    )
+    
 }
-
-//Fetch Covid Cases API (Adam and Hayden)
-
+flight();
 
 //Save Previous searches to local storage (Tyler)
 
 
 //Function to display searches to screen (Tyler)
 
-function prevSearch(){
-    //take local storage of saved searches
-    JSON.parse(window.localStorage.getItem(''));
-    //show in prev searches div
-
-}
-
-localStorage.setItem('')
-
-prevBtn.addEventListener('click', 'prevSearch')
-
-
-var search;
-localStorage.setItem('search');
-
-for (let i = 0; i < search.length; i++) {
-    
-    if {
-        search.textValue === 
-        
-        document.appendChild('#prevSearches')
-
-    }
-    
-}
