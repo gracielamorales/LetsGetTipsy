@@ -48,7 +48,7 @@ var cocktailFunction = function(){
 }
 
 //Make Cocktail Button
-var beerEl = document.querySelector('#cocktialButton');
+var beerEl = document.querySelector('#cocktailButton');
 beerEl.addEventListener('click', cocktailFunction);
 
 //Make Beer Button
