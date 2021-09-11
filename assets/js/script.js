@@ -22,7 +22,7 @@ var beerFunction = function () {
     
     
 }
-flightPrice();
+
 //Fetch Covid Cases API (Adam and Hayden)
 var cocktailFunction = function(){
     fetch(
