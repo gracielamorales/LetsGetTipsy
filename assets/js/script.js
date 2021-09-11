@@ -11,3 +11,13 @@
 
 
 //Function to display searches to screen (Tyler)
+function prevSearch(){
+    //take local storage of saved searches
+    //show in prev searches div
+
+}
+
+localStorage.setItem('')
+
+prevBtn.addEventListener('click', 'prevSearch')
+document.querySelector('#prevSearches')
