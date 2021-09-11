@@ -11,8 +11,10 @@
 
 
 //Function to display searches to screen (Tyler)
+
 function prevSearch(){
     //take local storage of saved searches
+    JSON.parse(window.localStorage.getItem(''));
     //show in prev searches div
 
 }
@@ -20,4 +22,18 @@ function prevSearch(){
 localStorage.setItem('')
 
 prevBtn.addEventListener('click', 'prevSearch')
-document.querySelector('#prevSearches')
+
+
+var search;
+localStorage.setItem('search');
+
+for (let i = 0; i < search.length; i++) {
+    
+    if {
+        search.textValue === 
+        
+        document.appendChild('#prevSearches')
+
+    }
+    
+}

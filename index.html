@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weekend Get Away</title>
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -17,26 +18,37 @@
     </header>
 
     <!--Div for Search Function-->
+    <div class="submit-form">
+        <form>
+            <label for="city">Vacation Destination City</label>
+            <input type="text" id="city" placeholder="City Name"/>
+
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="State Name"/>
+
+            <button id='searchFunction' class='searchFunction' type="button">Submit</button>
+            
+        </form>
+    </div>
     
-    <div id='searchFunction'>
-     <button class='searchButton'>
-    </button>
-    </div>
 
-    <!--Div to display flight prices-->
-    <div id='flightPrices' class='searchResults'>
-    </div>
+    <!-- displays for API results-->
+    <section class='searchResults'>
+        <!-- display flight prices-->
+        <article id='flightPrices'>
 
-    <!--Div to display Covid Cases-->
-    <div id='covidCases' class='searchResults'>
-    </div>
+        </article>
+        <!-- display Covid-->
+        <article id='covidCases'>
+
+        </article>
+    </section>
 
     <!--Div to display Previous Searches-->
     <div id='previousSearches' class='searchResults'>
     </div>
 
-<script src="./assets/js/script.js"></script>
-
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
