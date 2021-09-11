@@ -2,7 +2,7 @@
 
 
 //Fetch Flight Price API (Adam and Hayden)
-function flightPrice() {
+var beerFunction = function () {
     fetch(
         'https://api.punkapi.com/v2/beers'
     )
@@ -13,7 +13,7 @@ function flightPrice() {
     .then(function(randomBeer){
         console.log(randomBeer);
 
-        var beer = randomBeer.id[0]
+        var beer = randomBeer[0].name
 
         var beerResponse = document.querySelector('#beerName')
         beerResponse.innerHTML = beer;
@@ -24,23 +24,36 @@ function flightPrice() {
 }
 flightPrice();
 //Fetch Covid Cases API (Adam and Hayden)
-function flight() {
+var cocktailFunction = function(){
     fetch(
         'https://www.thecocktaildb.com/api/json/v1/1/random.php'
         
     )
 
-    .then(function(skyScannerPrices){
-        return skyScannerPrices.json();
+    .then(function(randomCocktail){
+        return randomCocktail.json();
     })
-    .then(function(skyScannerPrices){
-        console.log(skyScannerPrices);
+    .then(function(randomCocktail){
+        console.log(randomCocktail);
+
+        var cocktail = JSON.stringify(randomCocktail.drinks[0].strDrink);
+
+        var cocktailResponse = document.querySelector('#cocktailName')
+        cocktailResponse.innerHTML = 'Drink Name: ' + cocktail;
+
     }
     )
     
     
 }
-flight();
+
+//Make Cocktail Button
+var beerEl = document.querySelector('#cocktialButton');
+beerEl.addEventListener('click', cocktailFunction);
+
+//Make Beer Button
+var cocktailEl =document.querySelector('#beerButton');
+cocktailEl.addEventListener('click', beerFunction );
 
 //Save Previous searches to local storage (Tyler)
 
