@@ -2,7 +2,21 @@
 
 
 //Fetch Flight Price API (Adam and Hayden)
+function flightPrice() {
+    fetch(
+        'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/',
+    )
 
+    .then(function(skyScannerPrices){
+        return skyScannerPrices.json();
+    })
+    .then(function(skyScannerPrices){
+        console.log(skyScannerPrices);
+    }
+    )
+    
+    )
+}
 
 //Fetch Covid Cases API (Adam and Hayden)
 
