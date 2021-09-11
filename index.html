@@ -5,33 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weekend Get Away</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
     <!--Header and Jumbo-->
     <header id='weekendHeader' class='jumbo'>
-        <h1>Welcome to Weekend Get Away!</h1>
+        <h1>5 o'clock Somewhere</h1>
         <p>Use our search engine to help stay safe during your get away!</p>
     </header>
 
     <!--Div for Search Function-->
-    <div id='searchFunction'>
-    </div>
+    <div class="submit-form">
+        <form>
+            <label for="city">Vacation Destination City</label>
+            <input type="text" id="city" placeholder="City Name"/>
 
-    <!--Div to display flight prices-->
-    <div id='flightPrices' class='searchResults'>
-    </div>
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="State Name"/>
 
-    <!--Div to display Covid Cases-->
-    <div id='covidCases' class='searchResults'>
+            <button id='searchFunction' class='searchFunction' type="button">Submit</button>
+            
+        </form>
     </div>
+    
+    <button id='cocktailButton'>
+        <p>click Here For Cocktail</p>
+    </button>
+    
+    <button id='beerButton'>
+        <p>Click here for Beer</p>
+    </button>
+    
+    <!-- displays for API results-->
+    <section class='searchResults'>
+        <!-- display flight prices-->
+        <article id='beerName'>
+
+        </article>
+        <!-- display Covid-->
+        <article id='cocktailName'>
+
+        </article>
+    </section>
 
     <!--Div to display Previous Searches-->
     <div id='previousSearches' class='searchResults'>
     </div>
 
-
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
