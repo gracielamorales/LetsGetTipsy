@@ -56,7 +56,9 @@ var cocktailEl =document.querySelector('#beerButton');
 cocktailEl.addEventListener('click', beerFunction );
 
 //Save Previous searches to local storage (Tyler)
+// build an empty global array to collect previous searches
 
+// set whole array to local storage
 
 //Function to display searches to screen (Tyler)
 
