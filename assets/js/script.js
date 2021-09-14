@@ -13,7 +13,13 @@ var beerFunction = function () {
     .then(function(randomBeer){
         console.log(randomBeer);
 
-        var beer = randomBeer[0].name
+        
+        
+
+       var randomize = Math.floor(Math.random() * 25);
+       var beer = randomBeer[randomize].name
+        
+        console.log(beer);
 
         var beerResponse = document.querySelector('#beerName')
         beerResponse.innerHTML = beer;
@@ -37,9 +43,13 @@ var cocktailFunction = function(){
         console.log(randomCocktail);
 
         var cocktail = JSON.stringify(randomCocktail.drinks[0].strDrink);
+        var cocktailGlass = randomCocktail.drinks[0].strGlass
+        var cocktailIngredientOne = randomCocktail.drinks[0].strIngredient1;
+        console.log(cocktailGlass);
 
         var cocktailResponse = document.querySelector('#cocktailName')
-        cocktailResponse.innerHTML = 'Drink Name: ' + cocktail;
+        cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + 'Usually served in a(n): ' + 
+        cocktailGlass + '<br>' + 'Ingredients: ' + cocktailIngredientOne;
 
     }
     )
