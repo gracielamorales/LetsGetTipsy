@@ -46,10 +46,35 @@ var cocktailFunction = function(){
         var cocktailGlass = randomCocktail.drinks[0].strGlass
         var cocktailIngredientOne = randomCocktail.drinks[0].strIngredient1;
         console.log(cocktailGlass);
+        var cocktailIngredients = [
+            randomCocktail.drinks[0].strIngredient1
+           ,randomCocktail.drinks[0].strIngredient2
+           ,randomCocktail.drinks[0].strIngredient3
+           ,randomCocktail.drinks[0].strIngredient4
+           ,randomCocktail.drinks[0].strIngredient5
+           ,randomCocktail.drinks[0].strIngredient6
+           ,randomCocktail.drinks[0].strIngredient7
+           ,randomCocktail.drinks[0].strIngredient8
+           ,randomCocktail.drinks[0].strIngredient9
+           ,randomCocktail.drinks[0].strIngredient10
+           ,randomCocktail.drinks[0].strIngredient11
+           ,randomCocktail.drinks[0].strIngredient12
+           ,randomCocktail.drinks[0].strIngredient13
+           ,randomCocktail.drinks[0].strIngredient14
+           ,randomCocktail.drinks[0].strIngredient15];
+           console.log(cocktailIngredients);
+           var ingredientsAppend = [];
+               //var listIngredients =
+              for (let i = 0; i < cocktailIngredients.length; i++) {
+                  if (cocktailIngredients[i] !== null) {
+                      ingredientsAppend.push(cocktailIngredients[i]);
+                  }
+              }
+              console.log(ingredientsAppend);
 
         var cocktailResponse = document.querySelector('#cocktailName')
         cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + 'Usually served in a(n): ' + 
-        cocktailGlass + '<br>' + 'Ingredients: ' + cocktailIngredientOne;
+        cocktailGlass + '<br>' + 'Ingredients: ' + ingredientsAppend;
 
     }
     )
