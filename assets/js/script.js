@@ -1,7 +1,11 @@
-//Search bar function
+// global variables
+var beer;
+var cocktail;
 
+// create empty global array to collect previous searches
+var searchArr = [];
 
-//Fetch Flight Price API (Adam and Hayden)
+//Fetch beer API
 var beerFunction = function () {
     fetch(
         'https://api.punkapi.com/v2/beers'
@@ -17,19 +21,27 @@ var beerFunction = function () {
         
 
        var randomize = Math.floor(Math.random() * 25);
-       var beer = randomBeer[randomize].name
+       beer = randomBeer[randomize].name
         
         console.log(beer);
 
         var beerResponse = document.querySelector('#beerName')
         beerResponse.innerHTML = beer;
-    }
-    )
-    
+
+        function beerSearchFn () { 
+                 searchArr.push(beer);
+                 console.log(beer);
+            
+          // set whole array to local storage
+           localStorage.setItem('search-array', searchArr);  
+        }
+        beerSearchFn();
+        }
+    )    
     
 }
 
-//Fetch Covid Cases API (Adam and Hayden)
+//Fetch cocktail API
 var cocktailFunction = function(){
     fetch(
         'https://www.thecocktaildb.com/api/json/v1/1/random.php'
@@ -42,7 +54,7 @@ var cocktailFunction = function(){
     .then(function(randomCocktail){
         console.log(randomCocktail);
 
-        var cocktail = JSON.stringify(randomCocktail.drinks[0].strDrink);
+        cocktail = JSON.stringify(randomCocktail.drinks[0].strDrink);
         var cocktailGlass = randomCocktail.drinks[0].strGlass
         var cocktailIngredientOne = randomCocktail.drinks[0].strIngredient1;
         var cocktailIngredients = [
@@ -62,7 +74,7 @@ var cocktailFunction = function(){
     ,randomCocktail.drinks[0].strIngredient14
     ,randomCocktail.drinks[0].strIngredient15];
     console.log(cocktailIngredients);
-
+        
     var ingredientsAppend = [];
         //var listIngredients = 
 
@@ -72,21 +84,33 @@ var cocktailFunction = function(){
            }
            
        }
-       console.log(ingredientsAppend);
-            
-        
-
+       console.log(ingredientsAppend); 
         console.log(cocktailGlass);
 
         var cocktailResponse = document.querySelector('#cocktailName')
         cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + 'Usually served in a(n): ' + 
         cocktailGlass + '<br>' + 'Ingredients: ' + ingredientsAppend;
-
-
+    })
+        function cocktailSearchFn () { 
+            searchArr.push(cocktail);
+            console.log(cocktail);
+       
+     // set whole array to local storage
+      localStorage.setItem('search-array', searchArr); 
 
     }
-    )
     
+    function cocktailSearchFn () { 
+        searchArr.push(cocktail);   
+        console.log(cocktail);
+   
+ // set whole array to local storage
+  localStorage.setItem('search-array', searchArr);  
+}
+cocktailSearchFn();
+
+var prevSearch = document.getElementById('previous-search');
+prevSearch.innerHTML = localStorage.getItem('search-array', searchArr);
     
 }
 
@@ -98,10 +122,19 @@ beerEl.addEventListener('click', cocktailFunction);
 var cocktailEl =document.querySelector('#beerButton');
 cocktailEl.addEventListener('click', beerFunction );
 
-//Save Previous searches to local storage (Tyler)
+//Save Previous searches to local storage
+
 // build an empty global array to collect previous searches
-
-// set whole array to local storage
-
-//Function to display searches to screen (Tyler)
-
+function beerSearchFn () { 
+    if(!searchArr) {
+        searchArr = [];
+    } else { 
+         var searchStr = JSON.stringify(beerEl);
+         searchArr.push(searchStr);
+         console.log(searchArr);
+     //}
+  // set whole array to local storage
+   localStorage.setItem('search-array', searchArr);  
+    }
+}
+// Function to display searches to screen 
