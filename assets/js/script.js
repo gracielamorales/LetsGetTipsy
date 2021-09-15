@@ -64,7 +64,7 @@ var cocktailFunction = function(){
            ,randomCocktail.drinks[0].strIngredient15];
            console.log(cocktailIngredients);
            var ingredientsAppend = [];
-               //var listIngredients =
+               
               for (let i = 0; i < cocktailIngredients.length; i++) {
                   if (cocktailIngredients[i] !== null) {
                       ingredientsAppend.push(cocktailIngredients[i]);
