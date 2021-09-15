@@ -5,11 +5,21 @@
     flex-wrap: wrap;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
+    color: rgb(33, 188, 199);
 }
 
 body img {
     width: 30%;
+    flex-wrap: wrap;
+    background-size: cover;
 }
+
+.button-success {
+    color: black;
+    border-radius: 4px;
+    background: rbg(0,139,139)
+}
+
 .pure-u-1 {
     text-align: center;
     display: flex;
@@ -26,8 +36,4 @@ body img {
     margin-top: 15px;
     justify-content: space-between;
 
-}
-
-.button {
-    margin: 5px 5px 5px 5px;
 }
