@@ -44,7 +44,7 @@ var cocktailFunction = function(){
 
         var cocktail = JSON.stringify(randomCocktail.drinks[0].strDrink);
         var cocktailGlass = randomCocktail.drinks[0].strGlass
-        var cocktailIngredientOne = randomCocktail.drinks[0].strIngredient1;
+        
         console.log(cocktailGlass);
         var cocktailIngredients = [
             randomCocktail.drinks[0].strIngredient1
