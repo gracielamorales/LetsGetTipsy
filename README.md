@@ -1,2 +1,2 @@
-# WeekendGetAway
-As a conscientious traveler, I am looking for a weekend getaway in a place with low covid numbers. Weekend GetAway Covid Tracker enables the user to search for both flight prices and covid numbers. It saves your recent searches.
+# Let's Get Tipsy!
+As an adventurous drinker, I am looking for a new adult beverage to enjoy. Let's Get Tipsy enables the user to search for beer or cocktails, and will return a new beer or cocktail to try. Let's Get Tipsy! saves your recent searches.
