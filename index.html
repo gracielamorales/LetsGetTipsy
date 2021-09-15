@@ -7,49 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weekend Get Away</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" 
+    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" 
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
 </head>
 
 <body>
+    <img src="./assets/images/cocktails.jpg"/>
     <!--Header and Jumbo-->
-    <header id='weekendHeader' class='jumbo'>
-        <h1>5 o'clock Somewhere</h1>
-        <p>Use our search engine to help stay safe during your get away!</p>
-    </header>
+    <div class="pure-u-1" id=" tipsyHeader">
+        <h1> Let's Get Tipsy! </h1>
+        <p>Out and about enjoying a night with friends <br>
+            and you don't know what to order at the bar? <br>
+            Your new drink is only a click away!
+        </p>
+    </div>
 
-    <!--Div for Search Function-->
-    <div class="submit-form">
-        <form>
-            <label for="city">Vacation Destination City</label>
-            <input type="text" id="city" placeholder="City Name"/>
-
-            <label for="state">State</label>
-            <input type="text" id="state" placeholder="State Name"/>
-
-            <button id='searchFunction' class='searchFunction' type="button">Submit</button>
+    <!-- title above result section-->
+    <div class="pure-g">
+        <!--Beer Results-->
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3" id="subtitle">
+            <p>Beer Results</p>
+            <div class="pure-u-1" id="beerName">
             
-        </form>
+            </div>
+            
+        </div>
+        <!--buttons -->
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3" id="subtitle">
+            <p> I'm feeling lucky!</p>
+            <div class="pure-u-1" id="searchHere">
+                <div class="pure-button-group" role="group" aria-label="...">
+                    <button class="pure-button" id="beerButton">Click here for beer!</button>
+                    <button class="pure-button" id="cocktailButton">Click here for cocktail!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- cocktail-->
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3" id="subtitle">
+            <p>Cocktail Results</p>
+            <div class="pure-u-1 " id="cocktailName">
+           
+        </div>
+        </div>
     </div>
     
-    <button id='cocktailButton'>
-        <p>click Here For Cocktail</p>
-    </button>
-    
-    <button id='beerButton'>
-        <p>Click here for Beer</p>
-    </button>
-    
-    <!-- displays for API results-->
-    <section class='searchResults'>
-        <!-- display flight prices-->
-        <article id='beerName'>
-
-        </article>
-        <!-- display Covid-->
-        <article id='cocktailName'>
-
-        </article>
-    </section>
 
     <!--Div to display Previous Searches-->
     <div id='previousSearches' class='searchResults'>
