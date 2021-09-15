@@ -95,14 +95,14 @@ var cocktailFunction = function(){
     }
     cocktailSearchFn();
 })
-       
+      
        
      // set whole array to local storage
       localStorage.setItem('search-array', searchArr); 
 
     }
     
-    
+   
 
 
 var prevSearch = document.getElementById('previous-search');
@@ -120,17 +120,3 @@ cocktailEl.addEventListener('click', beerFunction );
 
 //Save Previous searches to local storage
 
-// build an empty global array to collect previous searches
-//function beerSearchFn () { 
-    //if(!searchArr) {
-      //  searchArr = [];
-    //} else { 
-   //      var searchStr = JSON.stringify(beerEl);
-   //      searchArr.push(searchStr);
-    //     console.log(searchArr);
-     //}
-  // set whole array to local storage
-  // localStorage.setItem('search-array', searchArr);  
-  //  }
-//}
-// Function to display searches to screen 
