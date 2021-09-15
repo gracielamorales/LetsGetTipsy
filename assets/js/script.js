@@ -16,20 +16,15 @@ var beerFunction = function () {
     })
     .then(function(randomBeer){
         console.log(randomBeer);
-
-        
-        
-
-       var randomize = Math.floor(Math.random() * 25);
-       beer = randomBeer[randomize].name
-        
-        console.log(beer);
-
+        // find random beer from API return
+        var randomize = Math.floor(Math.random() * 25);
+        beer = randomBeer[randomize].name
         var beerResponse = document.querySelector('#beerName')
+        // manipulate html with random beer name
         beerResponse.innerHTML = beer;
 
-        function beerSearchFn () { 
-                 searchArr.push(beer);
+       function beerSearchFn () { 
+          searchArr.push(beer);
                  console.log(beer);
             
           // set whole array to local storage
@@ -38,7 +33,6 @@ var beerFunction = function () {
         beerSearchFn();
         }
     )    
-    
 }
 
 //Fetch cocktail API
@@ -90,29 +84,31 @@ var cocktailFunction = function(){
         var cocktailResponse = document.querySelector('#cocktailName')
         cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + 'Usually served in a(n): ' + 
         cocktailGlass + '<br>' + 'Ingredients: ' + ingredientsAppend;
-    })
-        function cocktailSearchFn () { 
-            searchArr.push(cocktail);
+        
+    //add cocktail name to local storage array
+    function cocktailSearchFn () { 
+            searchArr.push(cocktail);   
             console.log(cocktail);
+       
+     // set whole array to local storage
+      localStorage.setItem('search-array', searchArr);  
+    }
+    cocktailSearchFn();
+})
+       
        
      // set whole array to local storage
       localStorage.setItem('search-array', searchArr); 
 
     }
     
-    function cocktailSearchFn () { 
-        searchArr.push(cocktail);   
-        console.log(cocktail);
-   
- // set whole array to local storage
-  localStorage.setItem('search-array', searchArr);  
-}
-cocktailSearchFn();
+    
+
 
 var prevSearch = document.getElementById('previous-search');
 prevSearch.innerHTML = localStorage.getItem('search-array', searchArr);
     
-}
+
 
 //Make Cocktail Button
 var beerEl = document.querySelector('#cocktailButton');
@@ -125,16 +121,16 @@ cocktailEl.addEventListener('click', beerFunction );
 //Save Previous searches to local storage
 
 // build an empty global array to collect previous searches
-function beerSearchFn () { 
-    if(!searchArr) {
-        searchArr = [];
-    } else { 
-         var searchStr = JSON.stringify(beerEl);
-         searchArr.push(searchStr);
-         console.log(searchArr);
+//function beerSearchFn () { 
+    //if(!searchArr) {
+      //  searchArr = [];
+    //} else { 
+   //      var searchStr = JSON.stringify(beerEl);
+   //      searchArr.push(searchStr);
+    //     console.log(searchArr);
      //}
   // set whole array to local storage
-   localStorage.setItem('search-array', searchArr);  
-    }
-}
+  // localStorage.setItem('search-array', searchArr);  
+  //  }
+//}
 // Function to display searches to screen 
