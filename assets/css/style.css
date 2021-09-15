@@ -42,3 +42,16 @@ body img {
     justify-content: space-between;
 
 }
+
+footer p {
+    background: rgb(33, 188, 199) ;
+    color: #fef0e6; 
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+footer img {
+    flex-wrap: wrap;
+    width: 32%;
+    background:rgb(33, 188, 199);
+}
