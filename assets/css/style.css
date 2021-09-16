@@ -5,21 +5,36 @@
     flex-wrap: wrap;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
+    color: rgb(33, 188, 199);
 }
 
 body img {
-    width: 30%;
+    width: 35%;
+    flex-wrap: wrap;
+    background-size: cover;
 }
+
 .pure-u-1 {
     text-align: center;
     display: flex;
     margin-bottom: 5px;
+    color:rgb(233, 116, 21);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    background-color: #fef0e6;
+   
 }
+
 
 .pure-g {
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 15px;
+    border-width: 320px;
+    border-color: black;
+    padding: 10px;
+    
 }
+
 
 
 .pure-button-group {
@@ -28,6 +43,15 @@ body img {
 
 }
 
-.button {
-    margin: 5px 5px 5px 5px;
+footer p {
+    background: rgb(33, 188, 199) ;
+    color: #fef0e6; 
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+footer img {
+    flex-wrap: wrap;
+    width: 32%;
+    background:rgb(33, 188, 199);
 }
