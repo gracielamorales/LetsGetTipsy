@@ -10,5 +10,8 @@ When a user visits Let’s Get Tipsy then they are presented with a choice of �
 When a user clicks on “Beer” or “Cocktail” a drink is presented.
 ![image](https://user-images.githubusercontent.com/87789457/133823627-1e7bcfb8-8bae-4c9e-ad3d-767d789509e5.png)
 
+#Links:
+Deployed Site: https://gracielamorales.github.io/LetsGetTipsy/
+GitHub repo:  https://github.com/gracielamorales/LetsGetTipsy
 
 
