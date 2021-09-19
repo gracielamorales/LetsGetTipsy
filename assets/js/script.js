@@ -59,6 +59,7 @@ var cocktailFunction = function () {
             var cocktailGlass = randomCocktail.drinks[0].strGlass
 
             console.log(cocktailGlass);
+            //Put ingredients into an array because they were not in the API
             var cocktailIngredients = [
                 randomCocktail.drinks[0].strIngredient1
                 , randomCocktail.drinks[0].strIngredient2
@@ -77,17 +78,17 @@ var cocktailFunction = function () {
                 , randomCocktail.drinks[0].strIngredient15];
             console.log(cocktailIngredients);
             var ingredientsAppend = [];
-
+                //For loop to pull ingredient if the var is not null
             for (let i = 0; i < cocktailIngredients.length; i++) {
                 if (cocktailIngredients[i] !== null) {
                     ingredientsAppend.push(cocktailIngredients[i]);
                 }
             }
             console.log(ingredientsAppend);
-
+            //Manipulate HTML to append cocktail facts
             var cocktailResponse = document.querySelector('#cocktailName')
-            cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + 'Usually served in a(n): ' +
-                cocktailGlass + '<br>' + 'Ingredients: ' + ingredientsAppend;
+            cocktailResponse.innerHTML = 'Drink Name: ' + cocktail + '<br>' + '<br>' + 'Usually served in a(n): ' +
+                cocktailGlass + '<br>' + '<br>' + 'Ingredients: ' + ingredientsAppend;
 
             //add cocktail name to local storage array
             function cocktailSearchFn() {
